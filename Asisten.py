@@ -2,7 +2,7 @@ from Database import fetch_one, fetch_all, execute_query
 from tabulate import tabulate
 def tampilkan_menu_asisten():
     while True:
-        print("\n=== Menu Asisten ===")
+        print("\n===Menu Asisten===")
         print("1. Kelola data klien")
         print("2. Kelola data event")
         print("3. Kelola rincian budgeting")

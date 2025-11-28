@@ -10,7 +10,7 @@ def tampilkan_menu_pemilik():
     }
 
     while True:
-        print("\n=== Menu Pemilik ===")
+        print("\n===Menu Pemilik===")
         print("1. Kelola data asisten")
         print("2. Kelola data vendor")
         print("3. Kelola data jenis vendor")
