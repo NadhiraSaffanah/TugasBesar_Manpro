@@ -76,3 +76,39 @@ def tampilkan_menu_asisten():
             else:
                 print("Pilihan tidak valid.")
 
+    def menu_event():
+        while True:
+            print("\n=== Kelola Data Event ===")
+            print("1. Tambah event")
+            print("2. Lihat semua event")
+            print("3. Lihat event spesifik")
+            print("0. Kembali")
+
+            pilihan = input("Pilih menu: ")
+            print()
+
+            if pilihan == '1':
+                id_Event = int(input("ID event: "))
+                nama = input("Nama event: ")
+                jenis_event = input("Jenis event: ")
+                tanggal_event = input("Tanggal event (YYYYMMDD): ")
+                jumlah_undangan = int(input("Jumlah undangan: "))
+                lokasi = input("Lokasi: ")
+                status_event = input("Status event: ")
+                total_budget = int(input("Total budget: "))
+                id_Klien = int(input("ID klien: "))
+
+                id_User = int(input("ID user: "))
+
+                tambah_event(id_Event, jenis_event, tanggal_event, jumlah_undangan, lokasi, status_event, total_budget, id_Klien)
+                tambah_user_event(id_Event, id_User)
+
+            elif pilihan == '2':
+                lihat_data_event()
+            elif pilihan == '3':
+                id_Klien = int(input("ID klien: "))
+                lihat_event_spesifik(id_Klien)
+            elif pilihan == '0':
+                break
+            else:
+                print("Pilihan tidak valid.")
