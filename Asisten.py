@@ -113,35 +113,35 @@ def tampilkan_menu_asisten():
             else:
                 print("Pilihan tidak valid.")
 
-def menu_budgeting():
-    while True:
-        print("\n=== Rincian Budgeting ===")
-        print("1. Lihat rincian budgeting")
-        print("2. Lihat total rincian budgeting")
-        print("3. Tambah vendor (harga dealing)")
-        print("4. Ubah harga dealing")
-        print("0. Kembali")
+    def menu_budgeting():
+        while True:
+            print("\n=== Rincian Budgeting ===")
+            print("1. Lihat rincian budgeting")
+            print("2. Lihat total rincian budgeting")
+            print("3. Tambah vendor (harga dealing)")
+            print("4. Ubah harga dealing")
+            print("0. Kembali")
 
-        pilihan = input("Pilih menu: ")
-        print()
+            pilihan = input("Pilih menu: ")
+            print()
 
-        if pilihan == '1':
-            id_Klien = int(input("ID klien: "))
-            lihat_rincian_budgeting(id_Klien)
-        elif pilihan == '2':
-            id_Event = int(input("ID event: "))
-            total_budget_event(id_Event)
-        elif pilihan == '3':
-            id_Event = int(input("ID event: "))
-            id_Vendor = int(input("ID vendor: "))
-            harga_dealing = int(input("Harga dealing: "))
-            tambah_harga_dealing(id_Event, id_Vendor, harga_dealing)
-        elif pilihan == '4':
-            id_Event = int(input("ID event: "))
-            id_Vendor = int(input("ID vendor: "))
-            harga_dealing = int(input("Harga dealing yang baru: "))
-            update_harga_dealing(id_Event, id_Vendor, harga_dealing)
-        elif pilihan == '0':
-            break
-        else:
-            print("Pilihan tidak valid.")
+            if pilihan == '1':
+                id_Klien = int(input("ID klien: "))
+                lihat_rincian_budgeting(id_Klien)
+            elif pilihan == '2':
+                id_Event = int(input("ID event: "))
+                total_budget_event(id_Event)
+            elif pilihan == '3':
+                id_Event = int(input("ID event: "))
+                id_Vendor = int(input("ID vendor: "))
+                harga_dealing = int(input("Harga dealing: "))
+                tambah_harga_dealing(id_Event, id_Vendor, harga_dealing)
+            elif pilihan == '4':
+                id_Event = int(input("ID event: "))
+                id_Vendor = int(input("ID vendor: "))
+                harga_dealing = int(input("Harga dealing yang baru: "))
+                update_harga_dealing(id_Event, id_Vendor, harga_dealing)
+            elif pilihan == '0':
+                break
+            else:
+                print("Pilihan tidak valid.")
