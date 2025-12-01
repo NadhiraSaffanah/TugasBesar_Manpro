@@ -145,3 +145,24 @@ def tampilkan_menu_asisten():
                 break
             else:
                 print("Pilihan tidak valid.")
+
+    def menu_laporan():
+        while True:
+            print("\n=== Laporan Event ===")
+            print("1. Event yang sudah selesai")
+            print("2. Event yang sedang berlangsung")
+            print("0. Kembali")
+
+            pilihan = input("Pilih menu: ")
+            print()
+
+            if pilihan == '1':
+                id_User = int(input("ID user: "))
+                completed_event(id_User)
+            elif pilihan == '2':
+                id_User = int(input("ID user: "))
+                upcoming_event(id_User)
+            elif pilihan == '0':
+                break
+            else:
+                print("Pilihan tidak valid.")
