@@ -156,3 +156,25 @@ def menu_kelola_vendor():
             print("Pilihan tidak valid.")
 
         pass
+
+def menu_kelola_jenis_vendor():
+    while True:
+        print("\n--- Kelola Jenis Vendor ---")
+        print("1. Lihat data jenis vendor")
+        print("2. Edit data jenis vendor")
+        print("0. Kembali")
+
+        pilihan = input("Pilih menu: ")
+        print()
+
+        if pilihan == '0':
+            break
+        elif pilihan == '1':
+            lihat_data_jenis_vendor()
+        elif pilihan == '2':
+            jenis_lama = input("Jenis lama: ")
+            jenis_baru = input("Jenis baru: ")
+            edit_jenis_vendor(jenis_lama, jenis_baru)
+        else:
+            print("Pilihan tidak valid.")
+        pass
