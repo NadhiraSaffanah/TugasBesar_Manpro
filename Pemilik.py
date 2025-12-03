@@ -178,3 +178,30 @@ def menu_kelola_jenis_vendor():
         else:
             print("Pilihan tidak valid.")
         pass
+
+def menu_laporan_kerjasama():
+    while True:
+        print("\n--- Laporan Kerja Sama ---")
+        print("1. Lihat semua laporan kerjasama")
+        print("2. Lihat laporan kerjasama spesifik")
+        print("3. Lihat frekuensi kerjasama semua vendor")
+        print("4. Lihat frekuensi kerjasama vendor spesifik")
+        print("0. Kembali")
+
+        pilihan = input("Pilih menu: ")
+        print()
+
+        if pilihan == '0':
+            break
+        elif pilihan == '1':
+            lihat_semua_laporan()
+        elif pilihan == '2':
+            id_Vendor = int(input("ID vendor: "))
+            lihat_laporan_tertentu(id_Vendor)
+        elif pilihan == '3':
+            lihat_frekuensi_semua_vendor()
+        elif pilihan == '4':
+            id_Vendor = int(input("ID vendor: "))
+            lihat_frekuensi_spesifik(id_Vendor)
+        else:
+            print("Pilihan tidak valid.")
