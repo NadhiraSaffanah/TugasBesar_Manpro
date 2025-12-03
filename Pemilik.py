@@ -89,3 +89,70 @@ def menu_kelola_asisten():
         else:
             print("Pilihan tidak valid.")
         pass
+
+def menu_kelola_vendor():
+    while True:
+        print("\n--- Kelola Vendor ---")
+        print("1. Tambah vendor")
+        print("2. Lihat data vendor")
+        print("3. Edit data vendor")
+        print("4. Hapus data vendor")
+        print("0. Kembali")
+
+        pilihan = input("Pilih menu: ")
+        print()
+
+        if pilihan == '0':
+            break
+
+        elif pilihan == '1':
+            id_Vendor = int(input("ID vendor: "))
+            nama = input("Nama: ")
+            nama_pemilik = input("Nama Pemilik: ")
+            alamat = input("Alamat: ")
+            no_telepon = input("No Telepon: ")
+            email = input("Email: ")
+            harga_min = int(input("Harga Min: "))
+            harga_max = int(input("Harga Max: "))
+            jenis_vendor = input("Jenis Vendor: ")
+
+            tambah_vendor(id_Vendor, nama, nama_pemilik, alamat, no_telepon, email, harga_min, harga_max, jenis_vendor)
+
+        elif pilihan == '2':
+            while True:
+                print("1. Lihat semua data vendor")
+                print("2. Lihat data vendor spesifik")
+                print("0. Kembali")
+
+                pilihan = input("Pilih menu: ")
+                print()
+
+                if pilihan == '0':
+                    break
+                elif pilihan == '1':
+                    lihat_semua_data_vendor()
+                elif pilihan == '2':
+                    id_Vendor = int(input("ID vendor: "))
+                    lihat_data_vendor(id_Vendor)
+                else:
+                    print("Pilihan tidak valid.")
+
+        elif pilihan == '3':
+            id_Vendor = int(input("ID vendor: "))
+            nama_baru = input("Nama vendor baru: ")
+            pemilik_baru = input("Pemilik baru: ")
+            alamat_baru = input("Alamat baru: ")
+            telepon_baru = input("Telepon baru: ")
+            email_baru = input("Email baru: ")
+            harga_min_baru = int(input("Harga min baru: "))
+            harga_max_baru = int(input("Harga max baru: "))
+            edit_data_vendor(id_Vendor, nama_baru, pemilik_baru, alamat_baru, telepon_baru, email_baru, harga_min_baru, harga_max_baru)
+
+        elif pilihan == '4':
+            id_Vendor = int(input("ID vendor: "))
+            hapus_vendor(id_Vendor)
+
+        else:
+            print("Pilihan tidak valid.")
+
+        pass
