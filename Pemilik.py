@@ -225,7 +225,7 @@ def menu_laporan_event():
         else:
             print("Pilihan tidak valid.")
 
-# Fungsi CRUD asisten (disatukan untuk efisiensi penggunaan)
+# Fungsi CRUD Pemilik (disatukan untuk efisiensi penggunaan)
 def tambah_asisten(id_User, username, password, nama, alamat, no_telepon, email, role):
     query = '''INSERT INTO [User] VALUES (?, ?, ?, ?, ?, ?, ?, ?)'''
     print()
