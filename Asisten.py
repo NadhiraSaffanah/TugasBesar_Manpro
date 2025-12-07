@@ -32,7 +32,7 @@ def tampilkan_menu_asisten():
 # ============================
 # SUB-MENU FUNGSI TERPISAH
 # ============================
-    def menu_klien():
+def menu_klien():
         while True:
             print("\n=== Kelola Data Klien ===")
             print("1. Tambah klien")
@@ -76,8 +76,8 @@ def tampilkan_menu_asisten():
             else:
                 print("Pilihan tidak valid.")
 
-    def menu_event():
-        while True:
+def menu_event():
+    while True:
             print("\n=== Kelola Data Event ===")
             print("1. Tambah event")
             print("2. Lihat semua event")
@@ -113,7 +113,7 @@ def tampilkan_menu_asisten():
             else:
                 print("Pilihan tidak valid.")
 
-    def menu_budgeting():
+def menu_budgeting():
         while True:
             print("\n=== Rincian Budgeting ===")
             print("1. Lihat rincian budgeting")
@@ -146,7 +146,7 @@ def tampilkan_menu_asisten():
             else:
                 print("Pilihan tidak valid.")
 
-    def menu_laporan():
+def menu_laporan():
         while True:
             print("\n=== Laporan Event ===")
             print("1. Event yang sudah selesai")
@@ -166,6 +166,24 @@ def tampilkan_menu_asisten():
                 break
             else:
                 print("Pilihan tidak valid.")
+
+
+def menu_vendor():
+    while True:
+        print("\n=== Data Vendor ===")
+        print("1. Daftar vendor")
+        print("0. Kembali")
+
+        pilihan = input("Pilih menu: ")
+        print()
+
+        if pilihan == '1':
+            jenis_vendor = input("Jenis vendor: ")
+            daftar_vendor(jenis_vendor)
+        elif pilihan == '0':
+            break
+        else:
+            print("Pilihan tidak valid.")
 
 # Fungsi CRUD asisten (disatukan untuk efisiensi penggunaan)
 def tambah_klien(id_klien, nama, alamat, no_telepon, email, tanggal_registrasi):
